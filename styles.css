@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  font-family: "Poppins", sans-serif; /*Pasirenkam srifta, kuri importinom html'e*/
+  min-height: 100vh; /*Kad per visa ekrana butu*/
+}
+.calculator {
+  display: block;
+  width: 330px;
+  margin: auto;
+  border: solid;
+  border-width: 2px;
+  justify-content: space-between;
+}
+.text-field {
+  background-color: rgb(120, 160, 40);
+  height: 180px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+button {
+  width: 78px;
+  height: 78px;
+  font-size: 30px;
+}
