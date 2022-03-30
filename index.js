@@ -42,7 +42,6 @@ division.addEventListener("click", actionPress)
 equal.addEventListener("click", equalPress)
 deleteall.addEventListener("click", deleteAllPress)
 
-//field.addEventListener("click", buttonPress)
 
 function numberPress(e) {
      input.textContent += parseInt(e.target.innerText)
@@ -52,7 +51,6 @@ function numberPress(e) {
           print.textContent = ""
           afterEqual=false
      }
-     //numbersForAction.push(parseInt(e.target.innerText))
 }
 
 function actionPress(e) {
@@ -61,29 +59,23 @@ function actionPress(e) {
      if (afterEqual==false) {
           numbersForAction.push(parseInt(temp))
      } else if(e.target.id == "+"||e.target.id == "-"||e.target.id == "*"||e.target.id == "/") {
-          //numbersForAction.push(parseInt(temp))
           afterEqual=false
      } else {
 
-          //numbersForAction.push(parseInt(temp))
-          //afterEqual=false
      }
      if (e.target.id == "+") {
           numbersForAction.push("+")
      } else if (e.target.id == "-") {
                numbersForAction.push("-")
      } else if (e.target.id == "/") {
-          //console.log("DALYBA")
                numbersForAction.push("/")
      } else if (e.target.id == "*") {
-          //console.log("DAUGYBA")
                numbersForAction.push("*")
      }
      print.textContent=undefined
      for (let i = 0; i < numbersForAction.length - 1; i++){
           print.textContent += numbersForAction[i]
      }
-     //console.log(numbersForAction)
 }
 
 function equalPress() {
@@ -95,8 +87,6 @@ function equalPress() {
      numbersForAction.push(parseInt(temp))
      input.textContent = ""
      for (let i = 0; i < numbersForAction.length; i++){
-          // if (numbersForAction[i] == "+" || numbersForAction[i] == "-" || numbersForAction[i] == "*" ||numbersForAction[i] == "/") {
-          //      act = numbersForAction[i]
                
           if ((numbersForAction[i] == "+" && i == 0) || (numbersForAction[i] == "-" && i == 0) || (numbersForAction[i] == "*" && i == 0) || (numbersForAction[i] == "/" && i == 0)) {
                ans="FALSE DATA"
@@ -122,12 +112,10 @@ function equalPress() {
                     }
                } else {
                     ans = parseInt(numbersForAction[i])
-                    //console.log(ans)
                }
                
           }
      }
-     //console.log(ans)
      if (ans == "FALSE DATA") {
           answerBottom.textContent = ans
      } else {
